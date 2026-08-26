@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 40px;
+            color: rgb(80, 80, 80);
+        }
+        h1 {
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        const harga = 150000;
+const diskonPersen = 20;
+const potongan = harga * (diskonPersen / 100);
+const hargaAkhir = harga - potongan;
+
+// Perbaikan 1 & 2: Menggunakan backtick (`) untuk template string
+console.log(`Harga awal: Rp${harga}`);
+console.log(`Diskon ${diskonPersen}% = Rp${potongan}`);
+console.log(`Harga akhir: Rp${hargaAkhir}`);
+
+const status = hargaAkhir < 100000 ? "Murah" : "Standar";
+
+// Perbaikan 3: Menggunakan backtick (`) dan kurung kurawal ${status}
+console.log(`kategori harga: ${status}`);
+    </script>
+</body>
+</html>

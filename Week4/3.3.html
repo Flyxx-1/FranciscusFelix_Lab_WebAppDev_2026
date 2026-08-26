@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 40px;
+            color: rgb(80, 80, 80);
+        }
+        h1 {
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // for: mencetak angka 1 sampai 5
+for (let i = 1; i <= 5; i++) {
+  console.log(`Perulangan ke-${i}`);
+}
+
+// while: menghitung mundur
+let sisa = 3;
+while (sisa > 0) {
+  console.log(`Hitung mundur: ${sisa}`);
+  sisa--;
+}
+
+// for...of: mengulang isi array
+const buah = ["apel", "jeruk", "mangga"];
+for (const item of buah) {
+  console.log(`Buah: ${item}`);
+}
+    </script>
+</body>
+</html>
