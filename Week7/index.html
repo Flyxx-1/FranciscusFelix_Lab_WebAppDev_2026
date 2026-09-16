@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TokoDBT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <h1>TokoDBT</h1>
+    <p>Praktikum Web — Digital Business Technology 25</p>
+  </div>
+  <button id="themeToggle" class="theme-toggle" aria-label="Ganti tema terang/gelap">🌙</button>
+</header>
+
+<main class="layout">
+  <section class="catalog">
+    <h2>Katalog Produk</h2>
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Cari nama produk...">
+      <select id="categorySelect">
+        <option value="all">Semua Kategori</option>
+        <option value="aksesoris">Aksesoris Komputer</option>
+        <option value="audio">Audio &amp; Headset</option>
+        <option value="penyimpanan">Penyimpanan Data</option>
+        <option value="display">Monitor &amp; Display</option>
+        <option value="elektronik">Elektronik Lainnya</option>
+        <option value="atk">Alat Tulis Kantor</option>
+        <option value="rumah">Kebutuhan Rumah Tangga</option>
+        <option value="dapur">Kebutuhan Dapur</option>
+      </select>
+      <select id="sortSelect">
+        <option value="default">Urutkan: Default</option>
+        <option value="harga-asc">Harga Termurah</option>
+        <option value="harga-desc">Harga Termahal</option>
+        <option value="nama-asc">Nama: A-Z</option>
+        <option value="nama-desc">Nama: Z-A</option>
+        <option value="stok-desc">Stok Terbanyak</option>
+      </select>
+    </div>
+    <p id="resultCount" class="result-count"></p>
+    <div id="productGrid" class="product-grid"></div>
+  </section>
+
+  <aside class="cart-panel">
+    <h2>Keranjang</h2>
+    <div id="cartEmpty" class="cart-empty">Keranjang masih kosong.</div>
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="shipping-progress">
+      <p id="shippingText">Belanja Rp300.000 untuk mendapat gratis ongkir.</p>
+      <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+    </div>
+
+    <div class="voucher-row">
+      <input type="text" id="voucherInput" placeholder="Kode voucher">
+      <button id="voucherBtn">Pakai</button>
+    </div>
+    <p id="voucherMsg" class="voucher-msg"></p>
+
+    <div class="summary">
+      <div class="summary-row"><span>Subtotal</span><span id="subtotalVal">Rp0</span></div>
+      <div class="summary-row"><span>Diskon</span><span id="diskonVal">-Rp0</span></div>
+      <div class="summary-row"><span>Ongkir</span><span id="ongkirVal">Gratis</span></div>
+      <div class="summary-row total"><span>Total</span><span id="totalVal">Rp0</span></div>
+    </div>
+
+    <button id="checkoutBtn" class="checkout-btn" disabled>Checkout</button>
+    <p id="orderMsg" class="order-msg"></p>
+  </aside>
+</main>
+
+<div id="checkoutModal" class="modal-overlay hidden">
+  <div class="modal" id="modalBody"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
